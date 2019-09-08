@@ -24,18 +24,21 @@ public class Game {
       // generate the die roll 
       Random randGen = new Random();
       int dieNum  =  randGen.nextInt(6) + 1;
-      System.out.println("The die is a " + dieNum);
+      int dieNum2  =  randGen.nextInt(6) + 1;
+      System.out.println("The dice are " + dieNum+" and "+dieNum2);
    
       // write the rest of your code below
 
-if(enteredNum==dieNum) {
-	enteredBet*=10;
+if(    (dieNum == enteredNum)    &&   (dieNum2 ==enteredNum)  ) {
+	enteredBet*=50;
 	
 	System.out.println("You win "+enteredBet+" dollars!");
 	break;
 	}
 
-else {System.out.println("Sorry you lose");  continue;}
+else {System.out.println("Sorry you lose");    System.out.println("       ");  continue;   }
+
+
 
 
 		}
